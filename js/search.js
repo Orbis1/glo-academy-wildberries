@@ -1,10 +1,10 @@
 const search = () => {
     const input = document.querySelector(".search-block > input");
-    input.addEventListener('input', (event) => {
-        console.log(event.target.value)
+    const search = document.querySelector("#button-addon2");
 
-    })
-
-}
+    search.addEventListener("click", () => {
+        console.dir(input.value);
+    });
+};
 
 search();
