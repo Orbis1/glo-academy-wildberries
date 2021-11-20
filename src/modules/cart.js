@@ -1,4 +1,4 @@
-const searchCart = () => {
+export const searchCart = () => {
     const cart = document.querySelector("button.button-cart");
     const btnModalClose = document.querySelector("button.modal-close");
     const modal = document.querySelector("#modal-cart");
@@ -14,5 +14,3 @@ const searchCart = () => {
     cart.addEventListener('click', showCart);
     btnModalClose.addEventListener('click', hideCart);
 }
-
-searchCart();

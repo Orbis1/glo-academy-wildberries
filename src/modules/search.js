@@ -1,4 +1,4 @@
-const search = () => {
+export const search = () => {
     const input = document.querySelector(".search-block > input");
     const search = document.querySelector("#button-addon2");
 
@@ -6,5 +6,3 @@ const search = () => {
         console.dir(input.value);
     });
 };
-
-search();

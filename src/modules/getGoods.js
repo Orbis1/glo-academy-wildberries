@@ -1,4 +1,4 @@
-const getGoods = () => {
+export const getGoods = () => {
     const links = document.querySelectorAll(".navigation-link");
     const navigation = document.querySelector("ul.navigation");
     // navigation.addEventListener("click", event => console.dir(event.target.innerText));
@@ -28,5 +28,3 @@ const getGoods = () => {
         })
     );
 };
-
-getGoods();
