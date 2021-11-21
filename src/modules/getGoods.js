@@ -61,3 +61,4 @@ export const getGoods = () => {
         renderGoods(JSON.parse(localStorage.getItem("goods")));
     }
 };
+

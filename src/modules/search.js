@@ -1,6 +1,6 @@
 import { renderGoods } from "./getGoods.js";
 
-const getData = (value, category) => {
+export const getData = (value, category) => {
     fetch("https://glo-acadamy-wildberries-default-rtdb.firebaseio.com/db.json")
         .then(res => res.json())
         .then(data => {
