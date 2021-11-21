@@ -4,13 +4,23 @@ export const searchCart = () => {
     const modal = document.querySelector("#modal-cart");
 
     const showCart = () => {
-        modal.style.display = 'flex';
-    }
+        modal.style.display = "flex";
+    };
 
     const hideCart = () => {
-        modal.style.display = '';
-    }
+        modal.style.display = "";
+    };
 
-    cart.addEventListener('click', showCart);
-    btnModalClose.addEventListener('click', hideCart);
-}
+    cart.addEventListener("click", showCart);
+    btnModalClose.addEventListener("click", hideCart);
+
+    modal.addEventListener("click", event => {
+        const isModal = event.target.closest(".modal");
+        if (!isModal) hideCart();
+    });
+
+    window.addEventListener("keydown", event => {
+        const { key } = event;
+        if (key === "Escape") hideCart();
+    });
+};
