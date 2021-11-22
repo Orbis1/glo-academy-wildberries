@@ -21,7 +21,6 @@ export const renderGoods = goods => {
         `;
 
         goodsContainer.append(goodBlock);
-        console.log(g);
     });
 };
 
