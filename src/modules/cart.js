@@ -5,6 +5,7 @@ export const searchCart = () => {
     const goodsContainer = document.querySelector(".long-goods-list");
     const cartTable = document.querySelector(".cart-table__goods");
     const modalForm = document.querySelector(".modal-form");
+    const total = document.querySelector(".card-table__total");
 
     modalForm.addEventListener("submit", event => {
         event.preventDefault();
@@ -55,7 +56,9 @@ export const searchCart = () => {
 
     const renderCart = items => {
         cartTable.innerHTML = "";
-        return items.forEach(item => {
+        const totalValue = items.reduce((acc, item) => acc + item.count * item.price, 0);
+        total.textContent = totalValue;
+        items.forEach(item => {
             const row = document.createElement("tr");
             row.innerHTML = `
                 <td>${item.name}</td>
